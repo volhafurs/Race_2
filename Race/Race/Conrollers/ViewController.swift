@@ -15,12 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "First VC"
-        view.backgroundColor = UIColor(hex: 0xD0C11C)
+        view.backgroundColor = UIColor(hex: 0xF5FFFA)
         onStartButton.applyCornerRadius(radius: 30)
         onStartButton.applyShadow(shadowOpacity: 0.5, shadowRadius: 0.5, shadowOffset: .zero, shadowColor: UIColor.lightGray.cgColor)
         }
 
-
+    @IBAction func onSettingsButton(_ sender: Any) {
+        transitToSettingsVC()
+    }
+    
     @IBAction func onStartButton(_ sender: Any) {
         transitToGameVC()
     }
@@ -30,6 +33,13 @@ class ViewController: UIViewController {
         let vc = storyboard.instantiateInitialViewController() as! GameViewController
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func transitToSettingsVC() {
+        let storyboards = UIStoryboard(name: "SettingsViewController", bundle: Bundle.main)
+        let vc1 = storyboards.instantiateInitialViewController() as! SettingsViewController
+        
+        navigationController?.pushViewController(vc1, animated: true)
     }
 }
 

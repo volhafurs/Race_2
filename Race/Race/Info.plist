@@ -5,7 +5,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Black.ttf</string>
+		<string>Roboto-BlackItalick.ttf</string>
 	</array>
+	<key></key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

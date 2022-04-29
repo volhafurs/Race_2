@@ -13,11 +13,14 @@
 		EE3A270027AC081A00ABB3EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3A26FE27AC081A00ABB3EF /* Main.storyboard */; };
 		EE3A270227AC081D00ABB3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3A270127AC081D00ABB3EF /* Assets.xcassets */; };
 		EE3A270527AC081D00ABB3EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3A270327AC081D00ABB3EF /* LaunchScreen.storyboard */; };
-		EE85B41927DA5DCA00A18364 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE85B41827DA5DCA00A18364 /* Roboto-Black.ttf */; };
 		EE8AFEFD27D9134300F7BE15 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AFEFC27D9134300F7BE15 /* UIColor+Hex.swift */; };
 		EE8AFEFF27D92BC400F7BE15 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AFEFE27D92BC400F7BE15 /* UIView+Corner.swift */; };
 		EE8CDEBD27D2335600F968BB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8CDEBC27D2335600F968BB /* GameViewController.swift */; };
 		EE8CDEBF27D2340800F968BB /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8CDEBE27D2340800F968BB /* GameViewController.storyboard */; };
+		EEA939072804D61E00A1309E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA939062804D61E00A1309E /* SettingsViewController.swift */; };
+		EEA939092804D65600A1309E /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA939082804D65600A1309E /* SettingsViewController.storyboard */; };
+		EEC47AA528195EC9004D3C9A /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC47AA428195EC9004D3C9A /* ResultManager.swift */; };
+		EEEA0551281884A70061EE57 /* ResultsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA0550281884A70061EE57 /* ResultsGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +32,15 @@
 		EE3A270127AC081D00ABB3EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE3A270427AC081D00ABB3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE3A270627AC081D00ABB3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE85B41827DA5DCA00A18364 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloaded fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		EE8AFEFC27D9134300F7BE15 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		EE8AFEFE27D92BC400F7BE15 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 		EE8CDEBC27D2335600F968BB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		EE8CDEBE27D2340800F968BB /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
+		EEA939062804D61E00A1309E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EEA939082804D65600A1309E /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		EEA9390A2804E05500A1309E /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		EEC47AA428195EC9004D3C9A /* ResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultManager.swift; sourceTree = "<group>"; };
+		EEEA0550281884A70061EE57 /* ResultsGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +73,14 @@
 		EE3A26F727AC081A00ABB3EF /* Race */ = {
 			isa = PBXGroup;
 			children = (
+				EEEA0554281885CC0061EE57 /* Extensions */,
+				EEEA0552281885160061EE57 /* Conrollers */,
+				EEEA0553281885390061EE57 /* Storyboards */,
+				EEEA05552818860C0061EE57 /* Structuries */,
 				EE85B41727DA5D0E00A18364 /* recourses */,
 				EE3A26F827AC081A00ABB3EF /* AppDelegate.swift */,
+				EEC47AA428195EC9004D3C9A /* ResultManager.swift */,
 				EE3A26FA27AC081A00ABB3EF /* SceneDelegate.swift */,
-				EE3A26FC27AC081A00ABB3EF /* ViewController.swift */,
-				EE3A26FE27AC081A00ABB3EF /* Main.storyboard */,
-				EE3A270327AC081D00ABB3EF /* LaunchScreen.storyboard */,
-				EE8CDEBC27D2335600F968BB /* GameViewController.swift */,
-				EE8CDEBE27D2340800F968BB /* GameViewController.storyboard */,
-				EE8AFEFC27D9134300F7BE15 /* UIColor+Hex.swift */,
-				EE8AFEFE27D92BC400F7BE15 /* UIView+Corner.swift */,
 				EE3A270127AC081D00ABB3EF /* Assets.xcassets */,
 				EE3A270627AC081D00ABB3EF /* Info.plist */,
 			);
@@ -85,9 +90,47 @@
 		EE85B41727DA5D0E00A18364 /* recourses */ = {
 			isa = PBXGroup;
 			children = (
-				EE85B41827DA5DCA00A18364 /* Roboto-Black.ttf */,
+				EEA9390A2804E05500A1309E /* Roboto-BlackItalic.ttf */,
 			);
 			path = recourses;
+			sourceTree = "<group>";
+		};
+		EEEA0552281885160061EE57 /* Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8CDEBC27D2335600F968BB /* GameViewController.swift */,
+				EEA939062804D61E00A1309E /* SettingsViewController.swift */,
+				EE3A26FC27AC081A00ABB3EF /* ViewController.swift */,
+			);
+			path = Conrollers;
+			sourceTree = "<group>";
+		};
+		EEEA0553281885390061EE57 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EE3A26FE27AC081A00ABB3EF /* Main.storyboard */,
+				EE8CDEBE27D2340800F968BB /* GameViewController.storyboard */,
+				EE3A270327AC081D00ABB3EF /* LaunchScreen.storyboard */,
+				EEA939082804D65600A1309E /* SettingsViewController.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EEEA0554281885CC0061EE57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE8AFEFC27D9134300F7BE15 /* UIColor+Hex.swift */,
+				EE8AFEFE27D92BC400F7BE15 /* UIView+Corner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEEA05552818860C0061EE57 /* Structuries */ = {
+			isa = PBXGroup;
+			children = (
+				EEEA0550281884A70061EE57 /* ResultsGame.swift */,
+			);
+			path = Structuries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +143,7 @@
 				EE3A26F127AC081A00ABB3EF /* Sources */,
 				EE3A26F227AC081A00ABB3EF /* Frameworks */,
 				EE3A26F327AC081A00ABB3EF /* Resources */,
+				EEEA054F28185F200061EE57 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -150,25 +194,49 @@
 			files = (
 				EE3A270527AC081D00ABB3EF /* LaunchScreen.storyboard in Resources */,
 				EE8CDEBF27D2340800F968BB /* GameViewController.storyboard in Resources */,
-				EE85B41927DA5DCA00A18364 /* Roboto-Black.ttf in Resources */,
 				EE3A270227AC081D00ABB3EF /* Assets.xcassets in Resources */,
+				EEA939092804D65600A1309E /* SettingsViewController.storyboard in Resources */,
 				EE3A270027AC081A00ABB3EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EEEA054F28185F200061EE57 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type if which swiftlint > /dev/null; then\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE3A26F127AC081A00ABB3EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEA0551281884A70061EE57 /* ResultsGame.swift in Sources */,
 				EE8CDEBD27D2335600F968BB /* GameViewController.swift in Sources */,
 				EE8AFEFF27D92BC400F7BE15 /* UIView+Corner.swift in Sources */,
+				EEA939072804D61E00A1309E /* SettingsViewController.swift in Sources */,
 				EE3A26FD27AC081A00ABB3EF /* ViewController.swift in Sources */,
 				EE3A26F927AC081A00ABB3EF /* AppDelegate.swift in Sources */,
 				EE8AFEFD27D9134300F7BE15 /* UIColor+Hex.swift in Sources */,
 				EE3A26FB27AC081A00ABB3EF /* SceneDelegate.swift in Sources */,
+				EEC47AA528195EC9004D3C9A /* ResultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
