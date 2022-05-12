@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         transitToSettingsVC()
     }
     
+    @IBAction func onResultsButton(_ sender: Any) {
+        transitToResultsVC()
+    }
+    
     @IBAction func onStartButton(_ sender: Any) {
         transitToGameVC()
     }
@@ -40,6 +44,13 @@ class ViewController: UIViewController {
         let vc1 = storyboards.instantiateInitialViewController() as! SettingsViewController
         
         navigationController?.pushViewController(vc1, animated: true)
+    }
+    
+    private func transitToResultsVC() {
+        let storyboards = UIStoryboard(name: "ResultsViewController", bundle: Bundle.main)
+        let vc2 = storyboards.instantiateInitialViewController() as! ResultsViewController
+        
+        navigationController?.pushViewController(vc2, animated: true)
     }
 }
 
