@@ -9,5 +9,5 @@ import Foundation
 
 struct ResultGame: Codable {
     let timeGame: String
-    let date: Date
+    let date: String
 }

@@ -213,7 +213,7 @@ class GameViewController: UIViewController {
         if imageCarView.frame.intersects(imageObstracleView.frame) || imageCarView.frame.intersects(imageBombView.frame) ||
             imageCarView.frame.intersects(imageUFO2View.frame) {
             finalScoreTime = String(format: "%.0f", scoreTime)
-            let result = ResultGame(timeGame: finalScoreTime, date: date)
+            let result = ResultGame(timeGame: finalScoreTime, date: currentDate)
             ResultsManager.saveResults(result: result)
             
             mainCar.removeFromSuperview()
