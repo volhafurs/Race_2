@@ -9,6 +9,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var chooseShuttleLabel: UILabel!
+    @IBOutlet weak var chooseSpeedLabel: UILabel!
     @IBOutlet weak var lowButton: UIButton!
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var veryFastButton: UIButton!
@@ -23,7 +26,13 @@ class SettingsViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        backButton.setTitle(NSLocalizedString("back.button", comment: ""), for: .normal)
+        chooseSpeedLabel.text = NSLocalizedString("speed.label", comment: "")
+        chooseShuttleLabel.text = NSLocalizedString("shuttle.label", comment: "")
+        lowButton.setTitle(NSLocalizedString("low.button", comment: ""), for: .normal)
+        fastButton.setTitle(NSLocalizedString("fast.button", comment: ""), for: .normal)
+        veryFastButton.setTitle(NSLocalizedString("veryfast.button", comment: ""), for: .normal)
+        
         let difficultyValue = UserDefaults.standard.integer(forKey: difficultyKey)
         difficulty = Difficulty(rawValue: difficultyValue) ?? .easy
     

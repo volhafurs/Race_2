@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var onStartButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var resultsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,9 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(hex: 0xF5FFFA)
         onStartButton.applyCornerRadius(radius: 30)
         onStartButton.applyShadow(shadowOpacity: 0.5, shadowRadius: 0.5, shadowOffset: .zero, shadowColor: UIColor.lightGray.cgColor)
+        onStartButton.setTitle(NSLocalizedString("button.start", comment: ""), for: .normal)
+        settingsButton.setTitle(NSLocalizedString("button.settings", comment: ""), for: .normal)
+        resultsButton.setTitle((NSLocalizedString("button.results", comment: "")), for: .normal)
         }
 
     @IBAction func onSettingsButton(_ sender: Any) {

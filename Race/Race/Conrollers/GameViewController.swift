@@ -8,7 +8,6 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
     let backgrond = UIImageView(image: UIImage(named: "ic_background"))
     let mainCar = UIImageView(image: UIImage(named: "ic_mainCar"))
     let obstracleCar = UIImageView(image: UIImage(named: "ic_obstacle"))
@@ -20,7 +19,7 @@ class GameViewController: UIViewController {
     var pageWidth = UIScreen.main.bounds.width
     var pageHeight = UIScreen.main.bounds.height
     var sizeCar = 70
-    var leftRightSize = 50
+    var leftRightSize = 60
     var labelSize = 200
     
     var difficulty = Difficulty.easy
@@ -138,7 +137,7 @@ class GameViewController: UIViewController {
 
     private func createLeftButton() {
         leftButton.backgroundColor = .orange
-        leftButton.setTitle("left", for: .normal)
+        leftButton.setTitle(NSLocalizedString("left.button", comment: ""), for: .normal)
         leftButton.frame = CGRect(x: 0,
                                   y: Int(pageHeight) - (sizeCar * 2),
                                   width: leftRightSize,
@@ -149,7 +148,7 @@ class GameViewController: UIViewController {
     }
     
     private func createStopGameLabel() {
-        stopGame.text = "GAME OVER"
+        stopGame.text = NSLocalizedString("label.stopgame", comment: "")
         stopGame.textColor = .red
         stopGame.font = UIFont(name: "Roboto-BlackItalic", size: 60)
         stopGame.frame = CGRect(
@@ -175,7 +174,7 @@ class GameViewController: UIViewController {
     
     private func createRightButton() {
         rightButton.backgroundColor = .orange
-        rightButton.setTitle("right", for: .normal)
+        rightButton.setTitle(NSLocalizedString("right.button", comment: ""), for: .normal)
         rightButton.frame = CGRect(x: Int(pageWidth) - Int(leftRightSize),
                                    y: Int(pageHeight)-(sizeCar*2),
                                    width: leftRightSize,

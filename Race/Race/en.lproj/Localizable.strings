@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Race
+
+  Created by Volha Furs on 23.06.22.
+  
+*/
+// MainViewController
+
+"button.start" = "Start";
+"button.settings" = "Settings";
+"button.results" = "Results";
+"label.stopgame" = "Game Over";
+
+//SettingsViewController
+
+"back.button" = "Save and Back";
+"speed.label" = "Choose the Game speed";
+"shuttle.label" = "Choose your shuttle";
+"low.button" = "Low";
+"fast.button" = "Fast";
+"veryfast.button" = "Very Fast";
+
+//  GameViewController
+
+"right.button" = "right";
+"left.button" = "left";
+

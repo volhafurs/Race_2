@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; configuration.title = "See my results"; ObjectID = "n87-GA-k1w"; */
+"n87-GA-k1w.configuration.title" = "See my results";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "n87-GA-k1w"; */
+"n87-GA-k1w.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Settings"; ObjectID = "ttS-Wc-tdX"; */
+"ttS-Wc-tdX.configuration.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ttS-Wc-tdX"; */
+"ttS-Wc-tdX.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "xSy-OX-ERR"; */
+"xSy-OX-ERR.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xSy-OX-ERR"; */
+"xSy-OX-ERR.normalTitle" = "Button";
