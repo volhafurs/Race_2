@@ -21,7 +21,3 @@
 "fast.button" = "Любитель";
 "veryfast.button" = "Профи";
 
-//  GameViewController
-
-"right.button" = "вправо";
-"left.button" = "влево";
