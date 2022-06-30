@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  Race
+
+  Created by Volha Furs on 23.06.22.
+  
+*/
+// MainViewController
+
+"button.start" = "Начать Игру";
+"button.settings" = "Настройки";
+"button.results" = "Результаты"; 
+"label.stopgame" = "Игра Окончена";
+
+//SettingsViewController
+
+"back.button" = "Сохранить";
+"speed.label" = "Настройка скорости";
+"shuttle.label" = "Настройка шатла";
+"low.button" = "Новичек";
+"fast.button" = "Любитель";
+"veryfast.button" = "Профи";
+
+//  GameViewController
+
+"right.button" = "вправо";
+"left.button" = "влево";

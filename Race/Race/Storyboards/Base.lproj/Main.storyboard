@@ -60,6 +60,8 @@
                     <navigationItem key="navigationItem" id="8rj-I5-JBk"/>
                     <connections>
                         <outlet property="onStartButton" destination="xSy-OX-ERR" id="5C5-TR-jV1"/>
+                        <outlet property="resultsButton" destination="n87-GA-k1w" id="7rR-Ge-6Bp"/>
+                        <outlet property="settingsButton" destination="ttS-Wc-tdX" id="htd-mK-1g1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

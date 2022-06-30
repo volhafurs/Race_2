@@ -45,7 +45,7 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let currentGameResult = dataArray[indexPath.row]
-        cell.textLabel?.text = "\(currentGameResult.timeGame) seconds, \(currentGameResult.date)"
+        cell.textLabel?.text = "\(currentGameResult.timeGame), \(currentGameResult.date)"
         return cell
     }
      
