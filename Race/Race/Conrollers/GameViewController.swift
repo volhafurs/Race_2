@@ -15,12 +15,14 @@ class GameViewController: UIViewController {
     let UFO = UIImageView(image: UIImage(named: "ic_UFO"))
     let stopGame = UILabel()
     let timeResult = UILabel()
+    var background1 = UIImageView()
+    var background2 = UIImageView()
     
     var pageWidth = UIScreen.main.bounds.width
     var pageHeight = UIScreen.main.bounds.height
     var sizeCar = 70
     var leftRightSize = 60
-    var labelSize = 200
+//    var labelSize = 200
     
     var difficulty = Difficulty.easy
     let difficultyKey = "speedKey"
@@ -42,8 +44,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = backgrond
-        backgrond.isUserInteractionEnabled = true
+        setUpBackground()
+        animateBackground()
+        setUpFormatter()
         
         let difficultyValue = UserDefaults.standard.integer(forKey: difficultyKey)
         difficulty = Difficulty(rawValue: difficultyValue) ?? .easy
@@ -61,11 +64,45 @@ class GameViewController: UIViewController {
         animation()
         
         checkObstraclesTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(checkObstracles), userInfo: NSDate(), repeats: true)
-        
+    }
+    
+    private func setUpFormatter() {
         formatter.dateFormat = "dd.MM.YYYY"
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
         currentDate = formatter.string(from: date as Date)
-        stopGame.text = "\(date)"
+    }
+    
+    private func setUpBackground() {
+        background1.frame = view.bounds
+        background1.image = UIImage(named: "ic_back")
+        background1.contentMode = .scaleAspectFill
+        view.addSubview(background1)
+        
+        background2.frame = view.bounds
+        background2.frame.origin = CGPoint(x: 0, y: -view.bounds.height)
+        background2.image = UIImage(named: "ic_back")
+        background2.contentMode = .scaleAspectFill
+        view.addSubview(background2)
+    }
+    
+    private func animateBackground() {
+        var backgroundYPoint = view.bounds.height
+        var backgroundYPoint2: CGFloat = 0
+        if background1.frame.origin.y == view.bounds.height {
+            background1.frame.origin.y = -view.bounds.height
+            backgroundYPoint = 0
+            backgroundYPoint2 = view.bounds.height
+        } else {
+            background2.frame.origin.y = -view.bounds.height
+            backgroundYPoint = view.bounds.height
+            backgroundYPoint2 = 0
+        }
+        UIView.animate(withDuration: 3, delay: 0, options: [.curveLinear]) {
+            self.background1.frame = CGRect(x: 0, y: backgroundYPoint, width: self.view.bounds.width, height: self.view.bounds.height)
+            self.background2.frame = CGRect(x: 0, y: backgroundYPoint2, width: self.view.bounds.width, height: self.view.bounds.height)
+        } completion: { _ in
+            self.animateBackground()
+        }
     }
     
     private func createMainCar() {
@@ -111,7 +148,7 @@ class GameViewController: UIViewController {
     private func animationBomb() {
         createBomb()
         UIView.animate(withDuration: Double(difficulty.rawValue),
-                       delay: 2,
+                       delay: 3,
                        options: [.repeat]) { [self] in
             self.bomb.frame = self.bomb.frame.offsetBy(dx: 0, dy: 1000)
                  } completion: { _ in
@@ -137,7 +174,8 @@ class GameViewController: UIViewController {
 
     private func createLeftButton() {
         leftButton.backgroundColor = .orange
-        leftButton.setTitle(NSLocalizedString("left.button", comment: ""), for: .normal)
+//        leftButton.setTitle(NSLocalizedString("left.button", comment: ""), for: .normal)
+        leftButton.setImage(UIImage(named: "ic_left"), for: .normal)
         leftButton.frame = CGRect(x: 0,
                                   y: Int(pageHeight) - (sizeCar * 2),
                                   width: leftRightSize,
@@ -148,14 +186,16 @@ class GameViewController: UIViewController {
     }
     
     private func createStopGameLabel() {
+        var labelWidth: CGFloat = view.bounds.width - 100
+        var labelHeight: CGFloat = 60
         stopGame.text = NSLocalizedString("label.stopgame", comment: "")
         stopGame.textColor = .red
         stopGame.font = UIFont(name: "Roboto-BlackItalic", size: 60)
-        stopGame.frame = CGRect(
-                                x: (Int(pageWidth)/2) - (labelSize/2),
-                                y: Int(pageHeight)/2,
-                                width: labelSize,
-                                height: labelSize)
+        stopGame.frame = CGRect(x: view.bounds.midX - labelWidth / 2,
+                                y: (view.bounds.height - labelHeight) / 2,
+                                width: labelWidth,
+                                height: labelHeight)
+        stopGame.textAlignment = .center
         view.addSubview(stopGame)
     }
     
@@ -174,7 +214,8 @@ class GameViewController: UIViewController {
     
     private func createRightButton() {
         rightButton.backgroundColor = .orange
-        rightButton.setTitle(NSLocalizedString("right.button", comment: ""), for: .normal)
+//        rightButton.setTitle(NSLocalizedString("right.button", comment: ""), for: .normal)
+        rightButton.setImage(UIImage(named: "ic_right"), for: .normal)
         rightButton.frame = CGRect(x: Int(pageWidth) - Int(leftRightSize),
                                    y: Int(pageHeight)-(sizeCar*2),
                                    width: leftRightSize,

@@ -7,22 +7,17 @@
 */
 // MainViewController
 
-"button.start" = "Start";
-"button.settings" = "Settings";
-"button.results" = "Results";
-"label.stopgame" = "Game Over";
+"button.start" = "LET'S GO!";
+"button.settings" = "SETTINGS";
+"button.results" = "RESULTS";
+"label.stopgame" = "GAME OVER";
 
 //SettingsViewController
 
-"back.button" = "Save and Back";
-"speed.label" = "Choose the Game speed";
-"shuttle.label" = "Choose your shuttle";
-"low.button" = "Low";
-"fast.button" = "Fast";
-"veryfast.button" = "Very Fast";
-
-//  GameViewController
-
-"right.button" = "right";
-"left.button" = "left";
+"back.button" = "SAVE AND BACK";
+"speed.label" = "CHOOSE THE GAME SPEED";
+"shuttle.label" = "CHOOSE YOUR SHUTTLE";
+"low.button" = "LOW";
+"fast.button" = "FAST";
+"veryfast.button" = "ADVANCED";
 
